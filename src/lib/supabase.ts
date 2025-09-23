@@ -12,20 +12,22 @@ export type ReservationData = {
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-// Validate environment variables
-if (!supabaseUrl || supabaseUrl.trim() === '' || supabaseUrl === 'your-supabase-url-here') {
-  throw new Error('VITE_SUPABASE_URL is missing or invalid. Please set a valid Supabase URL in your .env file (e.g., https://your-project-id.supabase.co)')
-}
+// Check if Supabase credentials are properly configured
+const isSupabaseConfigured = 
+  supabaseUrl && 
+  supabaseAnonKey && 
+  supabaseUrl !== 'your_supabase_project_url_here' && 
+  supabaseAnonKey !== 'your_supabase_anon_key_here' &&
+  supabaseUrl.startsWith('https://') &&
+  supabaseUrl.includes('.supabase.co')
 
-// Validate URL format
-try {
-  new URL(supabaseUrl)
-} catch (error) {
-  throw new Error(`VITE_SUPABASE_URL is not a valid URL format: "${supabaseUrl}". Please ensure it follows the format: https://your-project-id.supabase.co`)
-}
-
-if (!supabaseAnonKey || supabaseAnonKey.trim() === '' || supabaseAnonKey === 'your-supabase-anon-key-here') {
-  throw new Error('VITE_SUPABASE_ANON_KEY is missing or invalid. Please set a valid Supabase anonymous key in your .env file.')
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// Create Supabase client or mock client
+export const supabase = isSupabaseConfigured 
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : {
+      from: () => ({
+        insert: async () => ({ 
+          error: { message: 'Supabase is not configured. Please set up your Supabase credentials.' } 
+        })
+      })
+    } as any
