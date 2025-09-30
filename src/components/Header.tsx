@@ -69,7 +69,7 @@ const Header: React.FC = () => {
             {/* Mobile hamburger menu */}
             <button 
               onClick={toggleMobileMenu}
-              className="md:hidden flex flex-col space-y-1 cursor-pointer p-2 hover:bg-pearl-white/10 rounded-lg transition-colors duration-300"
+              className="md:hidden flex flex-col space-y-1 cursor-pointer p-2 hover:bg-pearl-white/10 rounded-lg transition-colors duration-300 -mr-2"
               aria-label="Toggle mobile menu"
             >
               <div className="w-5 h-0.5 bg-pearl-white"></div>
