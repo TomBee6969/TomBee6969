@@ -43,7 +43,7 @@ const Header: React.FC = () => {
               src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(43).png?updatedAt=1759259129217" 
               alt="FB Detailing Logo" 
               className={`w-auto object-contain transition-all duration-300 ${
-                isScrolled ? 'h-12' : 'h-16'
+                isScrolled ? 'h-10 sm:h-12' : 'h-12 sm:h-16'
               }`}
             />
           </div>
