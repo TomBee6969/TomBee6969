@@ -11,7 +11,6 @@ const HeroSection: React.FC = () => {
           alt="FB Detailing background" 
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-black/90 via-deep-black/60 to-transparent"></div>
       </div>
 
       {/* Content */}
