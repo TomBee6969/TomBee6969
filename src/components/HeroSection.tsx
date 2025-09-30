@@ -30,8 +30,7 @@ const HeroSection: React.FC = () => {
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-platinum-silver/90 mb-10 max-w-2xl leading-relaxed animate-fade-in-slide-up">
-            Objevte revoluci v péči o automobily. Naše služby kombinují 
-            nejmodernější technologie s výkonem a udržitelností.
+            Čištění interiéru, exteriéru a renovace světlometů
           </p>
 
           {/* CTA Buttons */}
