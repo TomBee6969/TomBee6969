@@ -75,9 +75,9 @@ const AboutSection: React.FC = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 gap-12 items-center justify-center">
           {/* Left Column - Features */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold mb-8">
               Proč si vybrat <span className="animated-gold-text">nás?</span>
             </h3>
@@ -85,7 +85,7 @@ const AboutSection: React.FC = () => {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-r from-graphite-grey/60 to-transparent p-8 rounded-2xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 hover:transform hover:translateX-2 group"
+                className="bg-gradient-to-r from-graphite-grey/60 to-graphite-grey/30 p-8 rounded-2xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 hover:transform hover:scale-105 group max-w-3xl mx-auto"
               >
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
@@ -104,10 +104,6 @@ const AboutSection: React.FC = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Right Column - Image and CTA */}
-          <div className="space-y-8">
           </div>
         </div>
       </div>
