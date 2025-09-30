@@ -343,7 +343,7 @@ const ContactSection: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Zpráva</label>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">Poznámka</label>
                 <textarea 
                   rows={4}
                   id="message"
