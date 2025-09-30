@@ -6,9 +6,11 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <span className="text-2xl font-bold animated-gold-text">
-              FB Detailing
-            </span>
+            <img 
+              src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(43).png?updatedAt=1759259129217" 
+              alt="FB Detailing Logo" 
+              className="h-12 w-auto object-contain"
+            />
           </div>
           <div className="text-platinum-silver text-sm">
             © 2025 FB Detailing. Všechna práva vyhrazena.
