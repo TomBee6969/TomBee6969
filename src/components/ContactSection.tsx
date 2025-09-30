@@ -151,14 +151,14 @@ const ContactSection: React.FC = () => {
             
             <div className="space-y-6">
               <div className="flex items-center p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
-                <div className="w-12 h-12 bg-gradient-to-br from-champagne-gold to-yellow-500 rounded-xl flex items-center justify-center mr-6 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
+                <div className="w-10 h-10 bg-gradient-to-br from-champagne-gold to-yellow-500 rounded-xl flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
-                <div className="flex-1">
+                <div>
                   <div className="text-sm text-platinum-silver">Telefon</div>
                   <a 
                     href="tel:+420778134784" 
-                    className="text-pearl-white font-semibold hover:text-champagne-gold transition-colors duration-300 text-base sm:text-lg"
+                    className="text-pearl-white font-semibold hover:text-champagne-gold transition-colors duration-300"
                   >
                     +420 778 134 784
                   </a>
@@ -166,14 +166,14 @@ const ContactSection: React.FC = () => {
               </div>
               
               <div className="flex items-center p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
-                <div className="w-12 h-12 bg-gradient-to-br from-champagne-gold to-yellow-500 rounded-xl flex items-center justify-center mr-6 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
+                <div className="w-10 h-10 bg-gradient-to-br from-champagne-gold to-yellow-500 rounded-xl flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
-                <div className="flex-1">
+                <div>
                   <div className="text-sm text-platinum-silver">Email</div>
                   <a 
                     href="mailto:fbdetailing52@gmail.com" 
-                    className="text-pearl-white font-semibold hover:text-champagne-gold transition-colors duration-300 text-base sm:text-lg"
+                    className="text-pearl-white font-semibold hover:text-champagne-gold transition-colors duration-300"
                   >
                     fbdetailing52@gmail.com
                   </a>
@@ -181,12 +181,12 @@ const ContactSection: React.FC = () => {
               </div>
               
               <div className="flex items-center p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
-                <div className="w-12 h-12 bg-gradient-to-br from-champagne-gold to-yellow-500 rounded-xl flex items-center justify-center mr-6 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
+                <div className="w-10 h-10 bg-gradient-to-br from-champagne-gold to-yellow-500 rounded-xl flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
-                <div className="flex-1">
+                <div>
                   <div className="text-sm text-platinum-silver">Lokalita</div>
-                  <div className="text-pearl-white font-semibold text-base sm:text-lg">Uherské Hradiště</div>
+                  <div className="text-pearl-white font-semibold">Uherské Hradiště</div>
                 </div>
               </div>
             </div>
