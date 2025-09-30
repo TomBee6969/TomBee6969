@@ -55,7 +55,7 @@ const AboutSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6" role="heading" aria-level="2">
-            O <span className="animated-gold-text">FB Detailing</span>
+            O <span className="animated-gold-text">nás</span>
           </h2>
           <p className="text-xl text-platinum-silver max-w-3xl mx-auto leading-relaxed">
             S více než 10 lety zkušeností v oboru auto detailingu poskytujeme 
