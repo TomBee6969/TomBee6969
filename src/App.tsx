@@ -213,42 +213,72 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-8 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold mb-2 leading-[1.4] animated-gold-text py-4 animate-scale-up-fade-in">
-              Auto Detailing
-            </h1>
-            <div className="text-2xl md:text-3xl text-platinum-silver mb-2 font-light animate-fade-in-slide-up">
-              Uherské Hradiště
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
+            alt="Luxury car background" 
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-black/90 via-deep-black/60 to-transparent"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-2xl">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-graphite-grey/80 backdrop-blur-sm border border-platinum-silver/20 mb-8 animate-fade-in-slide-up">
+              <div className="w-2 h-2 bg-champagne-gold rounded-full mr-3"></div>
+              <span className="text-platinum-silver text-sm font-medium">FB Detailing nyní dostupné</span>
             </div>
-            <div className="mb-12"></div>
-            <p className="text-xl md:text-2xl text-platinum-silver max-w-3xl mx-auto mb-10 animate-fade-in-slide-up">
-              Profesionální péče o každý vůz. Čištění interiéru, exteriéru a renovace světlometů
+
+            {/* Main Heading */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8 animate-scale-up-fade-in">
+              <span className="text-pearl-white">Profesionální</span><br />
+              <span className="animated-gold-text">auto detailing</span><br />
+              <span className="text-pearl-white">je zde</span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-xl md:text-2xl text-platinum-silver/90 mb-12 max-w-xl leading-relaxed animate-fade-in-slide-up">
+              Objevte revoluci v péči o automobily. Naše služby kombinují 
+              nejmodernější technologie s výkonem a udržitelností.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-slide-up">
-              <a href="#reservation-form" className="bg-gradient-gold text-deep-black px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300 flex items-center justify-center">
-                Rezervovat termín <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a href="#sluzby" className="border border-platinum-silver text-platinum-silver px-8 py-4 rounded-lg font-semibold text-lg hover:bg-platinum-silver hover:text-deep-black transition-all duration-300 inline-block text-center">
-                Zobrazit služby
-              </a>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-start gap-6 animate-fade-in-slide-up">
+              <div className="flex items-center gap-4">
+                <span className="text-2xl font-bold text-pearl-white">Od 1 490 Kč</span>
+                <a 
+                  href="#reservation-form" 
+                  className="inline-flex items-center px-8 py-4 bg-pearl-white text-deep-black rounded-full font-semibold text-lg hover:bg-platinum-silver transition-all duration-300 group"
+                >
+                  Rezervovat termín
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
             </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-graphite-grey p-6 rounded-xl hover:bg-graphite-grey/80 transition-all duration-300 animate-fade-in-zoom-up">
-              <Sparkles className="w-12 h-12 mb-4 mx-auto animate-pulse-icon text-champagne-gold" />
+              <Sparkles className="w-12 h-12 mb-4 animate-pulse-icon text-champagne-gold" />
               <h3 className="text-xl font-semibold mb-2">Kvalitní produkty</h3>
               <p className="text-platinum-silver">Používáme prostředky od Koch Chemie</p>
             </div>
             <div className="bg-graphite-grey p-6 rounded-xl hover:bg-graphite-grey/80 transition-all duration-300 animate-fade-in-zoom-up">
-              <Car className="w-12 h-12 mb-4 mx-auto animate-pulse-icon text-champagne-gold" />
+              <Car className="w-12 h-12 mb-4 animate-pulse-icon text-champagne-gold" />
               <h3 className="text-xl font-semibold mb-2">Mobilita</h3>
               <p className="text-platinum-silver">Přijedeme k vám a umyjeme vaše auto přímo na místě, bez jakéhokoli příplatku</p>
             </div>
             <div className="bg-graphite-grey p-6 rounded-xl hover:bg-graphite-grey/80 transition-all duration-300 animate-fade-in-zoom-up">
-              <Clock className="w-12 h-12 mb-4 mx-auto animate-pulse-icon text-champagne-gold" />
+              <Clock className="w-12 h-12 mb-4 animate-pulse-icon text-champagne-gold" />
               <h3 className="text-xl font-semibold mb-2">Rychlé zpracování</h3>
               <p className="text-platinum-silver">Minimální čekací doba</p>
             </div>
