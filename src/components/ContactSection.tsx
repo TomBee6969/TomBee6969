@@ -324,7 +324,7 @@ const ContactSection: React.FC = () => {
                 </select>
               </div>
               <div>
-                <label htmlFor="datetime" className="block text-sm font-medium mb-2">Datum a čas</label>
+                <label htmlFor="datetime" className="block text-sm font-medium mb-2">Datum a čas čištění</label>
                 <DatePicker
                   id="datetime"
                   selected={selectedDate}
