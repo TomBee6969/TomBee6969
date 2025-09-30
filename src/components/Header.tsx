@@ -63,6 +63,7 @@ const Header: React.FC = () => {
               <div className="w-5 h-0.5 bg-pearl-white"></div>
             </div>
           </div>
+          </div>
         </div>
       </div>
     </header>
