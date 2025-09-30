@@ -35,7 +35,7 @@ const Header: React.FC = () => {
         isScrolled ? 'px-6' : 'px-2 sm:px-3 lg:px-4'
         }`}>
           <div className={`flex justify-between items-center py-4 transition-all duration-300 ${
-          isScrolled ? 'h-16' : 'h-20'
+          isScrolled ? 'h-14' : 'h-16'
           }`}>
           {/* Logo */}
           <div className="flex items-center z-10">
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
               src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(43).png?updatedAt=1759259129217" 
               alt="FB Detailing Logo" 
               className={`w-auto object-contain transition-all duration-300 ${
-                isScrolled ? 'h-12' : 'h-16'
+                isScrolled ? 'h-10' : 'h-12'
               }`}
             />
           </div>
