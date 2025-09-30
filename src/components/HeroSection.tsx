@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-end pb-2">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-end">
         <div className="max-w-xl">
           {/* Badge */}
           <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-graphite-grey/80 backdrop-blur-sm border border-platinum-silver/20 mb-6 animate-fade-in-slide-up">
