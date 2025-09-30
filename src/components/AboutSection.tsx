@@ -79,7 +79,7 @@ const AboutSection: React.FC = () => {
           {/* Left Column - Features */}
           <div className="space-y-8 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold mb-8">
-              Proč si vybrat <span className="animated-gold-text">nás?</span>
+              <div className="text-center">Proč si vybrat <span className="animated-gold-text">nás?</span></div>
             </h3>
             
             {features.map((feature, index) => (
