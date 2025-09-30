@@ -6,11 +6,6 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <img 
-              src="/FBdetail.png copy.png" 
-              alt="FB Detailing Logo" 
-              className="w-8 h-8 object-contain"
-            />
             <span className="text-2xl font-bold animated-gold-text">
               FB Detailing
             </span>
