@@ -25,8 +25,7 @@ const HeroSection: React.FC = () => {
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 animate-scale-up-fade-in">
             <span className="text-pearl-white">Profesionální</span><br />
-            <span className="animated-gold-text">auto detailing</span><br />
-            <span className="text-pearl-white">je zde</span>
+            <span className="animated-gold-text">auto detailing</span>
           </h1>
 
           {/* Description */}
