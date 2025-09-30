@@ -6,7 +6,7 @@ const AboutSection: React.FC = () => {
     { number: "60+", label: "spokojených zákazníků", icon: Award },
     { number: "4.8★", label: "Hodnocení", icon: Star },
     { number: "100%", label: "Spokojenost", icon: Star },
-    { number: "24h", label: "Rychlé zpracování", icon: Clock }
+    { number: "2.5h", label: "Rychlé zpracování", icon: Clock }
   ];
 
   const features = [
