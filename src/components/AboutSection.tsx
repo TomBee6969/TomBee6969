@@ -54,7 +54,7 @@ const AboutSection: React.FC = () => {
             O <span className="animated-gold-text">nás</span>
           </h2>
           <p className="text-xl text-platinum-silver max-w-3xl mx-auto leading-relaxed">
-            S více než 10 lety zkušeností v oboru auto detailingu poskytujeme 
+            S více než 3 lety zkušeností v oboru auto detailingu poskytujeme 
             našim klientům služby na nejvyšší úrovni. Specializujeme se na 
             prémiové automobily a klademe důraz na kvalitu a preciznost.
           </p>
