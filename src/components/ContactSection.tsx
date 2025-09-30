@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { cs } from 'date-fns/locale';
 import { supabase, type ReservationData } from '../lib/supabase';
-import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook, Clock, Star, Send, CheckCircle } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -101,58 +101,141 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="kontakt" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="kontakt" className="py-20 px-4 sm:px-6 lg:px-8 bg-deep-black relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-champagne-gold rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 bg-blue-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-purple-500 rounded-full blur-2xl animate-pulse delay-500"></div>
+      </div>
+
+      {/* Animated grid pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.3) 1px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }}></div>
+      </div>
+
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" role="heading" aria-level="2">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6" role="heading" aria-level="2">
             <span className="animated-gold-text">Kontakt</span>
           </h2>
-          <p className="text-xl text-platinum-silver max-w-2xl mx-auto">
-            Kontaktujte nás a rezervujte si termín
+          <p className="text-xl text-platinum-silver max-w-3xl mx-auto leading-relaxed">
+            Kontaktujte nás a rezervujte si termín pro prémiové auto detailing
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-graphite-grey p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-6" role="heading" aria-level="3">Kontaktní informace</h3>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <Phone className="w-6 h-6 mr-4 text-champagne-gold" />
-                <span>+420 778 134 784</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+          {/* Contact Information Card */}
+          <div className="bg-gradient-to-br from-graphite-grey/80 to-graphite-grey/40 backdrop-blur-sm p-8 rounded-3xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 group">
+            <div className="flex items-center mb-8">
+              <div className="w-12 h-12 bg-gradient-gold rounded-2xl flex items-center justify-center mr-4 group-hover:rotate-6 transition-transform duration-300">
+                <Phone className="w-6 h-6 text-deep-black" />
               </div>
-              <div className="flex items-center">
-                <Mail className="w-6 h-6 mr-4 text-champagne-gold" />
-                <span>fbdetailing52@gmail.com</span>
+              <h3 className="text-2xl font-bold text-pearl-white group-hover:text-champagne-gold transition-colors duration-300" role="heading" aria-level="3">
+                Kontaktní informace
+              </h3>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-center p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
+                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                  <Phone className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-sm text-platinum-silver">Telefon</div>
+                  <div className="text-pearl-white font-semibold">+420 778 134 784</div>
+                </div>
               </div>
-              <div className="flex items-center">
-                <MapPin className="w-6 h-6 mr-4 text-champagne-gold" />
-                <span>Uherské Hradiště</span>
+              
+              <div className="flex items-center p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                  <Mail className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-sm text-platinum-silver">Email</div>
+                  <div className="text-pearl-white font-semibold">fbdetailing52@gmail.com</div>
+                </div>
               </div>
-              <div className="flex items-center">
-                <Instagram className="w-6 h-6 mr-4 text-champagne-gold" />
-                <a href="https://instagram.com/fbdetailing52" target="_blank" rel="noopener noreferrer" className="hover:text-champagne-gold transition-colors">
-                  @fbdetailing52
+              
+              <div className="flex items-center p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
+                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                  <MapPin className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-sm text-platinum-silver">Lokalita</div>
+                  <div className="text-pearl-white font-semibold">Uherské Hradiště</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div className="mt-8 pt-6 border-t border-platinum-silver/10">
+              <h4 className="text-lg font-semibold text-pearl-white mb-4">Sledujte nás</h4>
+              <div className="flex space-x-4">
+                <a 
+                  href="https://instagram.com/fbdetailing52" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300 group/social"
+                >
+                  <Instagram className="w-6 h-6 text-white group-hover/social:scale-110 transition-transform duration-300" />
                 </a>
-              </div>
-              <div className="flex items-center">
-                <Facebook className="w-6 h-6 mr-4 text-champagne-gold" />
-                <a href="https://facebook.com/fbdetailing52" target="_blank" rel="noopener noreferrer" className="hover:text-champagne-gold transition-colors">
-                  FB Detailing
+                <a 
+                  href="https://facebook.com/fbdetailing52" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300 group/social"
+                >
+                  <Facebook className="w-6 h-6 text-white group-hover/social:scale-110 transition-transform duration-300" />
                 </a>
               </div>
             </div>
 
-            <div className="mt-8">
-              <h4 className="text-xl font-semibold mb-4" role="heading" aria-level="4">Otevírací doba</h4>
-              <div className="space-y-2 text-platinum-silver">
-                <div>Pondělí - Pátek: 16:00 - 20:00</div>
-                <div>Sobota - Neděle: 8:00 - 18:00</div>
+            {/* Opening Hours */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-champagne-gold/10 to-transparent rounded-2xl border border-champagne-gold/20">
+              <div className="flex items-center mb-4">
+                <Clock className="w-6 h-6 text-champagne-gold mr-3" />
+                <h4 className="text-xl font-semibold text-pearl-white">Otevírací doba</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-platinum-silver">Pondělí - Pátek</span>
+                  <span className="text-pearl-white font-semibold">16:00 - 20:00</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-platinum-silver">Sobota - Neděle</span>
+                  <span className="text-pearl-white font-semibold">8:00 - 18:00</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="mt-8 flex items-center justify-center space-x-6 text-center">
+              <div className="flex items-center space-x-2">
+                <Star className="w-5 h-5 text-champagne-gold" />
+                <span className="text-sm text-platinum-silver">5.0 hodnocení</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-500" />
+                <span className="text-sm text-platinum-silver">1000+ klientů</span>
               </div>
             </div>
           </div>
 
-          <div id="reservation-form" className="bg-graphite-grey p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-6" role="heading" aria-level="3">Rezervace termínu</h3>
+          {/* Reservation Form Card */}
+          <div id="reservation-form" className="bg-gradient-to-br from-graphite-grey/80 to-graphite-grey/40 backdrop-blur-sm p-8 rounded-3xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 group">
+            <div className="flex items-center mb-8">
+              <div className="w-12 h-12 bg-gradient-gold rounded-2xl flex items-center justify-center mr-4 group-hover:rotate-6 transition-transform duration-300">
+                <Send className="w-6 h-6 text-deep-black" />
+              </div>
+              <h3 className="text-2xl font-bold text-pearl-white group-hover:text-champagne-gold transition-colors duration-300" role="heading" aria-level="3">
+                Rezervace termínu
+              </h3>
+            </div>
+            
             <form className="space-y-4" onSubmit={handleSubmit}>
               {submitMessage && (
                 <div className={`p-4 rounded-lg ${
@@ -171,7 +254,7 @@ const ContactSection: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-deep-black border border-platinum-silver/20 rounded-lg focus:border-champagne-gold focus:outline-none text-pearl-white"
+                  className="w-full px-4 py-3 bg-deep-black/70 border border-platinum-silver/20 rounded-xl focus:border-champagne-gold focus:outline-none text-pearl-white transition-all duration-300 hover:bg-deep-black/90"
                   placeholder="Vaše jméno"
                   required
                 />
@@ -184,7 +267,7 @@ const ContactSection: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-deep-black border border-platinum-silver/20 rounded-lg focus:border-champagne-gold focus:outline-none text-pearl-white"
+                  className="w-full px-4 py-3 bg-deep-black/70 border border-platinum-silver/20 rounded-xl focus:border-champagne-gold focus:outline-none text-pearl-white transition-all duration-300 hover:bg-deep-black/90"
                   placeholder="vas@email.cz"
                   required
                 />
@@ -197,7 +280,7 @@ const ContactSection: React.FC = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-deep-black border border-platinum-silver/20 rounded-lg focus:border-champagne-gold focus:outline-none text-pearl-white"
+                  className="w-full px-4 py-3 bg-deep-black/70 border border-platinum-silver/20 rounded-xl focus:border-champagne-gold focus:outline-none text-pearl-white transition-all duration-300 hover:bg-deep-black/90"
                   placeholder="+420 123 456 789"
                   required
                 />
@@ -209,7 +292,7 @@ const ContactSection: React.FC = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-deep-black border border-platinum-silver/20 rounded-lg focus:border-champagne-gold focus:outline-none text-pearl-white"
+                  className="w-full px-4 py-3 bg-deep-black/70 border border-platinum-silver/20 rounded-xl focus:border-champagne-gold focus:outline-none text-pearl-white transition-all duration-300 hover:bg-deep-black/90"
                   required
                 >
                   <option value="">Vyberte službu</option>
@@ -233,7 +316,7 @@ const ContactSection: React.FC = () => {
                   dateFormat="dd.MM.yyyy HH:mm"
                   minDate={new Date()}
                   placeholderText="Vyberte datum a čas"
-                  className="w-full px-4 py-3 bg-deep-black border border-platinum-silver/20 rounded-lg focus:border-champagne-gold focus:outline-none text-pearl-white"
+                  className="w-full px-4 py-3 bg-deep-black/70 border border-platinum-silver/20 rounded-xl focus:border-champagne-gold focus:outline-none text-pearl-white transition-all duration-300 hover:bg-deep-black/90"
                   calendarClassName="bg-deep-black border border-platinum-silver/20"
                   timeCaption="Čas"
                   required
@@ -247,16 +330,17 @@ const ContactSection: React.FC = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-deep-black border border-platinum-silver/20 rounded-lg focus:border-champagne-gold focus:outline-none text-pearl-white"
+                  className="w-full px-4 py-3 bg-deep-black/70 border border-platinum-silver/20 rounded-xl focus:border-champagne-gold focus:outline-none text-pearl-white transition-all duration-300 hover:bg-deep-black/90 resize-none"
                   placeholder="Dodatečné informace..."
                 ></textarea>
               </div>
               <button 
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-gold text-deep-black py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-gold text-deep-black py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 flex items-center justify-center space-x-2 group/btn"
               >
-                {isSubmitting ? 'Odesílám...' : 'Odeslat rezervaci'}
+                <span>{isSubmitting ? 'Odesílám...' : 'Odeslat rezervaci'}</span>
+                {!isSubmitting && <Send className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />}
               </button>
             </form>
           </div>
