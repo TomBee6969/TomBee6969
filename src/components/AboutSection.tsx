@@ -4,7 +4,7 @@ import { Award, Users, Droplets, Zap, Shield, Star, CheckCircle, Clock } from 'l
 const AboutSection: React.FC = () => {
   const stats = [
     { number: "10+", label: "Let zkušeností", icon: Award },
-      number: "5★", label: "Hodnocení", icon: Star
+    { number: "5★", label: "Hodnocení", icon: Star },
     { number: "100%", label: "Spokojenost", icon: Star },
     { number: "24h", label: "Rychlé zpracování", icon: Clock }
   ];
