@@ -35,16 +35,13 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-start gap-6 animate-fade-in-slide-up">
-            <div className="flex items-center gap-4">
-              <span className="text-2xl font-bold text-pearl-white">Od 1 490 Kč</span>
-              <a 
-                href="#reservation-form" 
-                className="inline-flex items-center px-8 py-4 bg-pearl-white text-deep-black rounded-full font-semibold text-lg hover:bg-platinum-silver transition-all duration-300 group"
-              >
-                Rezervovat termín
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
+            <a 
+              href="#reservation-form" 
+              className="inline-flex items-center px-8 py-4 bg-pearl-white text-deep-black rounded-full font-semibold text-lg hover:bg-platinum-silver transition-all duration-300 group"
+            >
+              Rezervovat termín
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
         </div>
       </div>
