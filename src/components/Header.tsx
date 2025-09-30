@@ -8,11 +8,6 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-20 py-4">
           {/* Logo */}
           <div className="flex items-center z-10">
-            <img 
-              src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(43).png?updatedAt=1759259129217" 
-              alt="FB Detailing Logo" 
-              className="w-10 h-10 mr-3 object-contain"
-            />
             <span className="text-xl font-bold animated-gold-text">
               FB Detailing
             </span>
