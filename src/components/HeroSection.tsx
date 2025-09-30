@@ -11,12 +11,8 @@ const HeroSection: React.FC = () => {
           alt="FB Detailing background" 
           className="w-full h-full object-cover object-center md:block hidden"
         />
-        {/* Mobile background image */}
-        <img 
-          src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(45).png?updatedAt=1759259826305" 
-          alt="FB Detailing mobile background" 
-          className="w-full h-full object-cover object-center md:hidden block"
-        />
+        {/* Black background for mobile */}
+        <div className="w-full h-full bg-deep-black md:hidden block"></div>
       </div>
 
       {/* Content */}
