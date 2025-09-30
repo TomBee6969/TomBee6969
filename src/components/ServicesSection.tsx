@@ -4,20 +4,6 @@ import { Check, Star } from 'lucide-react';
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      name: "Mokré čištění interiéru",
-      price: "2 490 Kč", 
-      description: "Hloubkové čištění a ochrana interiéru",
-      features: ["Vysávání", "Čištění čalounění", "Dashboard treatment", "Skla zevnitř"],
-      isPopular: true
-    },
-    {
-      name: "Kompletní balíček",
-      price: "4 490 Kč",
-      description: "Kompletní péče o váš vůz - exteriér i interiér",
-      features: ["Mokré čištění interiéru", "čištění exteriéru", "Aplikace tekutých stěračů", "renovace světlometů"],
-      isPopular: false
-    },
-    {
       name: "Suché čištění interiéru",
       price: "1 490 Kč",
       description: "Důkladné mytí interiéru s výživou plastů",
@@ -25,10 +11,24 @@ const ServicesSection: React.FC = () => {
       isPopular: false
     },
     {
+      name: "Mokré čištění interiéru",
+      price: "2 490 Kč", 
+      description: "Hloubkové čištění a ochrana interiéru",
+      features: ["Vysávání", "Čištění čalounění", "Dashboard treatment", "Skla zevnitř"],
+      isPopular: true
+    },
+    {
       name: "Renovace světlometů",
       price: "990 Kč",
       description: "Renovace zamlžených světlometů",
       features: ["Odstranění zamlžení", "Leštění", "UV ochrana", "Zlepšení viditelnosti"],
+      isPopular: false
+    },
+    {
+      name: "Kompletní balíček",
+      price: "4 490 Kč",
+      description: "Kompletní péče o váš vůz - exteriér i interiér",
+      features: ["Mokré čištění interiéru", "Čištění exteriéru", "Aplikace tekutých stěračů", "Renovace světlometů"],
       isPopular: false
     }
   ];
