@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-start gap-6 animate-fade-in-slide-up">
             <a 
-              href="#reservation-form" 
+              href="#kontakt" 
               className="inline-flex items-center px-8 py-4 bg-pearl-white text-deep-black rounded-full font-semibold text-lg hover:bg-platinum-silver transition-all duration-300 group"
             >
               Rezervovat termín
