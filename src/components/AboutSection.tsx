@@ -112,19 +112,6 @@ const AboutSection: React.FC = () => {
 
           {/* Right Column - Image and CTA */}
           <div className="space-y-8">
-            {/* Image placeholder with overlay */}
-            <div className="relative rounded-2xl overflow-hidden group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-graphite-grey to-deep-black flex items-center justify-center border border-platinum-silver/10">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-10 h-10 text-deep-black" />
-                  </div>
-                  <h4 className="text-2xl font-bold text-pearl-white mb-2">Kvalita na prvním místě</h4>
-                  <p className="text-platinum-silver">Každý detail má svůj význam</p>
-                </div>
-              </div>
-            </div>
-
             {/* CTA Card */}
             <div className="bg-gradient-to-br from-champagne-gold/10 to-transparent p-8 rounded-2xl border border-champagne-gold/20">
               <h4 className="text-2xl font-bold text-pearl-white mb-4">
