@@ -146,7 +146,12 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-sm text-platinum-silver">Telefon</div>
-                  <div className="text-pearl-white font-semibold">+420 778 134 784</div>
+                  <a 
+                    href="tel:+420778134784" 
+                    className="text-pearl-white font-semibold hover:text-champagne-gold transition-colors duration-300"
+                  >
+                    +420 778 134 784
+                  </a>
                 </div>
               </div>
               
@@ -156,7 +161,12 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-sm text-platinum-silver">Email</div>
-                  <div className="text-pearl-white font-semibold">fbdetailing52@gmail.com</div>
+                  <a 
+                    href="mailto:fbdetailing52@gmail.com" 
+                    className="text-pearl-white font-semibold hover:text-champagne-gold transition-colors duration-300"
+                  >
+                    fbdetailing52@gmail.com
+                  </a>
                 </div>
               </div>
               
