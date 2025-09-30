@@ -216,14 +216,6 @@ function App() {
           </div>
         </div>
       </header>
-              </nav>
-              <a href="#reservation-form" className="bg-gradient-gold text-deep-black px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300 animate-fade-in-slide-right inline-block">
-                Rezervace
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
