@@ -52,7 +52,7 @@ const Header: React.FC = () => {
 
           {/* Right side - CTA button and mobile menu */}
           <div className="flex items-center space-x-4 z-10">
-            <a href="#reservation-form" className="hidden sm:block bg-gradient-gold text-deep-black px-6 py-2 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300">
+            <a href="#kontakt" className="hidden sm:block bg-gradient-gold text-deep-black px-6 py-2 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300">
               Rezervace
             </a>
             

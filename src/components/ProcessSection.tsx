@@ -106,7 +106,7 @@ const ProcessSection: React.FC = () => {
               Celý proces trvá jen několik hodin a výsledek vás nadchne
             </p>
             <a 
-              href="#reservation-form" 
+              href="#kontakt" 
               className="inline-flex items-center px-8 py-4 bg-gradient-gold text-deep-black rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300 group"
             >
               Rezervovat nyní
