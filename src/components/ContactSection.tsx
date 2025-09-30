@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { cs } from 'date-fns/locale';
-import { supabase, type ReservationData } from '../lib/supabase';
 import { Phone, Mail, MapPin, Instagram, Facebook, Clock, Star, Send, CheckCircle } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
@@ -64,37 +63,48 @@ const ContactSection: React.FC = () => {
     setIsSubmitting(true);
     setSubmitMessage(null);
 
-    const reservationData: ReservationData = {
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone,
-      service: formData.service,
-      reservation_date: selectedDate.toISOString(),
-      message: formData.message
-    };
+    try {
+      // Prepare form data for Web3Forms
+      const web3FormData = new FormData();
+      web3FormData.append('access_key', '283eabee-8d97-4858-aca4-48ddfceb1007');
+      web3FormData.append('name', formData.name);
+      web3FormData.append('email', formData.email);
+      web3FormData.append('phone', formData.phone);
+      web3FormData.append('service', formData.service);
+      web3FormData.append('reservation_date', selectedDate.toLocaleString('cs-CZ'));
+      web3FormData.append('message', formData.message);
+      web3FormData.append('subject', `Nová rezervace od ${formData.name} - ${formData.service}`);
 
-    const { error } = await supabase.from('reservations').insert([reservationData]);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: web3FormData
+      });
 
-    if (error) {
-      console.error('Error submitting reservation to Supabase:', error);
+      const result = await response.json();
+
+      if (result.success) {
+        // Success - reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+        setSelectedDate(null);
+        
+        setSubmitMessage({
+          type: 'success',
+          text: 'Rezervace byla úspěšně odeslána!'
+        });
+      } else {
+        throw new Error(result.message || 'Neznámá chyba');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
       setSubmitMessage({
         type: 'error',
-        text: `Došlo k chybě při odesílání rezervace: ${error.message}`
-      });
-    } else {
-      // Success - reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-      setSelectedDate(null);
-      
-      setSubmitMessage({
-        type: 'success',
-        text: 'Rezervace byla úspěšně odeslána!'
+        text: `Došlo k chybě při odesílání rezervace: ${error instanceof Error ? error.message : 'Neznámá chyba'}`
       });
     }
     setIsSubmitting(false);
