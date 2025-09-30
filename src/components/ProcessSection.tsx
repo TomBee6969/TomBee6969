@@ -52,11 +52,6 @@ const ProcessSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-champagne-gold/10 border border-champagne-gold/20 mb-6">
-            <div className="w-2 h-2 bg-champagne-gold rounded-full mr-3 animate-pulse"></div>
-            <span className="text-champagne-gold text-sm font-medium">Náš proces</span>
-          </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold mb-6" role="heading" aria-level="2">
             Jak to <span className="animated-gold-text">Funguje</span>
           </h2>
