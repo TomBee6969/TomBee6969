@@ -17,11 +17,11 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 animate-fade-in-slide-down transition-all duration-300 ${
       isScrolled 
-        ? 'bg-deep-black/80 backdrop-blur-md rounded-3xl mx-8 mt-4 max-w-5xl left-1/2 transform -translate-x-1/2' 
+        ? 'bg-deep-black/80 backdrop-blur-md rounded-3xl mx-8 mt-4 max-w-5xl' 
         : ''
     }`}>
       <div className={`mx-auto h-full transition-all duration-300 ${
-        isScrolled ? 'px-6' : 'max-w-7xl px-2 sm:px-3 lg:px-4'
+        isScrolled ? 'px-6 max-w-5xl' : 'max-w-7xl px-2 sm:px-3 lg:px-4'
       }`}>
         <div className={`flex justify-between items-center py-4 transition-all duration-300 ${
           isScrolled ? 'h-16' : 'h-20'
