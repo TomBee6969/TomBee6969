@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-graphite-grey/80 backdrop-blur-sm border border-platinum-silver/20 mb-8 animate-fade-in-slide-up">
             <div className="w-2 h-2 bg-champagne-gold rounded-full mr-3"></div>
-            <span className="text-platinum-silver text-sm font-medium">FB Detailing nyní dostupné</span>
+            <span className="text-platinum-silver text-sm font-medium">Prémiová péče o váš vůz</span>
           </div>
 
           {/* Main Heading */}
