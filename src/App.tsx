@@ -182,27 +182,40 @@ function App() {
       </svg>
 
       {/* Header */}
-      <header className="bg-graphite-grey/50 backdrop-blur-sm w-full z-50 border-b border-platinum-silver/10 animate-fade-in-slide-down h-[100px]">
-        <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 h-full">
-          <div className="flex justify-between items-center h-full mt-[0px]">
+      <header className="bg-deep-black/95 backdrop-blur-sm w-full z-50 border-b border-platinum-silver/10 animate-fade-in-slide-down h-[80px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+          <div className="flex justify-between items-center h-full">
             <div className="flex items-center">
-              <img 
-                src="/FBdetail.png copy.png" 
-                alt="FB Detailing Logo" 
-                className="w-24 h-24 object-contain mt-[9px]"
-              />
-              <span className="text-2xl font-bold animated-gold-text ml-[-8px]">
-              <span className="text-2xl font-bold animated-gold-text ml-[-18px]">
-                Detailing
-              </span>
-              </span>
+              <div className="w-10 h-10 bg-pearl-white rounded-full flex items-center justify-center">
+                <Car className="w-6 h-6 text-deep-black" />
+              </div>
             </div>
-            <div className="flex items-center space-x-8">
-              <nav className="hidden md:flex space-x-8">
-                <a href="#sluzby" className="text-platinum-silver hover:text-champagne-gold transition-colors animate-fade-in-slide-right">Služby</a>
-                <a href="#proces" className="text-platinum-silver hover:text-champagne-gold transition-colors animate-fade-in-slide-right">Proces</a>
-                <a href="#onas" className="text-platinum-silver hover:text-champagne-gold transition-colors animate-fade-in-slide-right">O nás</a>
-                <a href="#kontakt" className="text-platinum-silver hover:text-champagne-gold transition-colors animate-fade-in-slide-right">Kontakt</a>
+            
+            <nav className="hidden md:flex space-x-8">
+              <a href="#sluzby" className="text-pearl-white hover:text-champagne-gold transition-colors font-medium">Služby</a>
+              <a href="#proces" className="text-pearl-white hover:text-champagne-gold transition-colors font-medium">Proces</a>
+              <a href="#onas" className="text-pearl-white hover:text-champagne-gold transition-colors font-medium">O nás</a>
+              <a href="#kontakt" className="text-pearl-white hover:text-champagne-gold transition-colors font-medium">Kontakt</a>
+            </nav>
+
+            <div className="flex items-center space-x-4">
+              <a href="#reservation-form" className="hidden md:inline-block bg-gradient-gold text-deep-black px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300">
+                Rezervace
+              </a>
+              <button className="md:hidden flex flex-col space-y-1 w-6 h-6 justify-center">
+                <div className="w-6 h-0.5 bg-pearl-white"></div>
+                <div className="w-6 h-0.5 bg-pearl-white"></div>
+                <div className="w-6 h-0.5 bg-pearl-white"></div>
+              </button>
+              <button className="hidden md:flex flex-col space-y-1 w-6 h-6 justify-center">
+                <div className="w-6 h-0.5 bg-pearl-white"></div>
+                <div className="w-6 h-0.5 bg-pearl-white"></div>
+                <div className="w-6 h-0.5 bg-pearl-white"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
               </nav>
               <a href="#reservation-form" className="bg-gradient-gold text-deep-black px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300 animate-fade-in-slide-right inline-block">
                 Rezervace
