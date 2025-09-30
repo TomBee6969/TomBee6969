@@ -77,13 +77,16 @@ const ServicesSection: React.FC = () => {
                 ))}
               </ul>
               
-              <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 mt-auto ${
+              <a 
+                href="#kontakt"
+                className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 mt-auto inline-block text-center ${
                 service.isPopular 
                   ? 'bg-gradient-gold text-deep-black hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow' 
                   : 'bg-transparent border border-champagne-gold text-champagne-gold hover:bg-champagne-gold hover:text-deep-black'
-              }`}>
+              }`}
+              >
                 Rezervovat službu
-              </button>
+              </a>
             </div>
           ))}
         </div>
