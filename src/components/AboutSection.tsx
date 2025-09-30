@@ -49,22 +49,19 @@ const AboutSection: React.FC = () => {
               <li className="flex items-start">
                 <Droplets className="w-6 h-6 mr-3 mt-0.5 flex-shrink-0" fill="url(#animatedGoldGradient)" />
                 <div>
-                  <div className="font-semibold">Eco-friendly produkty</div>
-                  <div className="text-platinum-silver text-sm">Šetrné k životnímu prostředí</div>
+                  <div className="font-semibold">Používáme prostředky od Koch Chemie</div>
                 </div>
               </li>
               <li className="flex items-start">
                 <Zap className="w-6 h-6 mr-3 mt-0.5 flex-shrink-0" fill="url(#animatedGoldGradient)" />
                 <div>
-                  <div className="font-semibold">Nejmodernější technologie</div>
-                  <div className="text-platinum-silver text-sm">Používáme nejnovější metody</div>
+                  <div className="font-semibold">Přijedeme k vám a umyjeme vaše auto přímo na místě, bez jakéhokoli příplatku</div>
                 </div>
               </li>
               <li className="flex items-start">
                 <Shield className="w-6 h-6 mr-3 mt-0.5 flex-shrink-0" fill="url(#animatedGoldGradient)" />
                 <div>
-                  <div className="font-semibold">Záruka kvality</div>
-                  <div className="text-platinum-silver text-sm">100% spokojenost zákazníků</div>
+                  <div className="font-semibold">Rychlé zpracování</div>
                 </div>
               </li>
             </ul>
