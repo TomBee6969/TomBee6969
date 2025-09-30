@@ -1,22 +1,44 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { Car } from 'lucide-react';
 
 const Header: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 animate-fade-in-slide-down">
+    <header className={`fixed top-0 left-0 right-0 z-50 animate-fade-in-slide-down transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-deep-black/80 backdrop-blur-md border-b border-platinum-silver/10 rounded-b-3xl mx-4 mt-2' 
+        : ''
+    }`}>
       <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 h-full">
-        <div className="flex justify-between items-center h-20 py-4">
+        <div className={`flex justify-between items-center py-4 transition-all duration-300 ${
+          isScrolled ? 'h-16' : 'h-20'
+        }`}>
           {/* Logo */}
           <div className="flex items-center z-10">
             <img 
               src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(43).png?updatedAt=1759259129217" 
               alt="FB Detailing Logo" 
-              className="h-16 w-auto object-contain"
+              className={`w-auto object-contain transition-all duration-300 ${
+                isScrolled ? 'h-12' : 'h-16'
+              }`}
             />
           </div>
 
           {/* Floating Navigation Island */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-4">
+          <div className={`absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 ${
+            isScrolled ? 'top-3' : 'top-4'
+          }`}>
             <nav className="hidden md:flex bg-deep-black/80 backdrop-blur-md border border-platinum-silver/10 rounded-full px-8 py-3 space-x-8">
               <a href="#sluzby" className="text-pearl-white hover:text-champagne-gold transition-colors text-sm font-medium">Služby</a>
               <a href="#proces" className="text-pearl-white hover:text-champagne-gold transition-colors text-sm font-medium">Proces</a>
