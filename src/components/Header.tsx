@@ -15,10 +15,10 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 animate-fade-in-slide-down transition-all duration-300`}>
+    <header className={`fixed top-4 left-0 right-0 z-50 animate-fade-in-slide-down transition-all duration-300`}>
       <div className={`mx-auto transition-all duration-300 ${
       isScrolled 
-          ? 'bg-deep-black/80 backdrop-blur-md rounded-3xl mt-4 max-w-5xl' 
+          ? 'bg-deep-black/80 backdrop-blur-md rounded-3xl mt-0 max-w-5xl' 
         : 'max-w-7xl w-full'
       }`}>
         <div className={`h-full transition-all duration-300 ${
