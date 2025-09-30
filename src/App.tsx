@@ -182,31 +182,41 @@ function App() {
       </svg>
 
       {/* Header */}
-      <header className="bg-graphite-grey/50 backdrop-blur-sm w-full z-50 border-b border-platinum-silver/10 animate-fade-in-slide-down h-[100px]">
+      <header className="fixed top-0 left-0 right-0 z-50 animate-fade-in-slide-down">
         <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 h-full">
-          <div className="flex justify-between items-center h-full mt-[0px]">
-            <div className="flex items-center">
-              <img 
-                src="/FBdetail.png copy.png" 
-                alt="FB Detailing Logo" 
-                className="w-24 h-24 object-contain mt-[9px]"
-              />
-              <span className="text-2xl font-bold animated-gold-text ml-[-8px]">
-              <span className="text-2xl font-bold animated-gold-text ml-[-18px]">
-                Detailing
-              </span>
+          <div className="flex justify-between items-center h-20 py-4">
+            {/* Logo */}
+            <div className="flex items-center z-10">
+              <div className="w-10 h-10 bg-pearl-white rounded-full flex items-center justify-center mr-3">
+                <Car className="w-5 h-5 text-deep-black" />
+              </div>
+              <span className="text-xl font-bold animated-gold-text">
+                FB Detailing
               </span>
             </div>
-            <div className="flex items-center space-x-8">
-              <nav className="hidden md:flex space-x-8">
-                <a href="#sluzby" className="text-platinum-silver hover:text-champagne-gold transition-colors animate-fade-in-slide-right">Služby</a>
-                <a href="#proces" className="text-platinum-silver hover:text-champagne-gold transition-colors animate-fade-in-slide-right">Proces</a>
-                <a href="#onas" className="text-platinum-silver hover:text-champagne-gold transition-colors animate-fade-in-slide-right">O nás</a>
-                <a href="#kontakt" className="text-platinum-silver hover:text-champagne-gold transition-colors animate-fade-in-slide-right">Kontakt</a>
+
+            {/* Floating Navigation Island */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-4">
+              <nav className="hidden md:flex bg-deep-black/80 backdrop-blur-md border border-platinum-silver/10 rounded-full px-8 py-3 space-x-8">
+                <a href="#sluzby" className="text-pearl-white hover:text-champagne-gold transition-colors text-sm font-medium">Služby</a>
+                <a href="#proces" className="text-pearl-white hover:text-champagne-gold transition-colors text-sm font-medium">Proces</a>
+                <a href="#onas" className="text-pearl-white hover:text-champagne-gold transition-colors text-sm font-medium">O nás</a>
+                <a href="#kontakt" className="text-pearl-white hover:text-champagne-gold transition-colors text-sm font-medium">Kontakt</a>
               </nav>
-              <a href="#reservation-form" className="bg-gradient-gold text-deep-black px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300 animate-fade-in-slide-right inline-block">
+            </div>
+
+            {/* Right side - CTA button and mobile menu */}
+            <div className="flex items-center space-x-4 z-10">
+              <a href="#reservation-form" className="hidden sm:block bg-gradient-gold text-deep-black px-6 py-2 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300">
                 Rezervace
               </a>
+              
+              {/* Mobile hamburger menu */}
+              <div className="md:hidden flex flex-col space-y-1 cursor-pointer">
+                <div className="w-5 h-0.5 bg-pearl-white"></div>
+                <div className="w-5 h-0.5 bg-pearl-white"></div>
+                <div className="w-5 h-0.5 bg-pearl-white"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -225,7 +235,7 @@ function App() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
           <div className="max-w-2xl">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-graphite-grey/80 backdrop-blur-sm border border-platinum-silver/20 mb-8 animate-fade-in-slide-up">
