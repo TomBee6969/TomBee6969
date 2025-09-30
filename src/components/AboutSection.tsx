@@ -22,7 +22,7 @@ const AboutSection: React.FC = () => {
     },
     {
       icon: Shield,
-      number: "60+", label: "Spokojených klientů", icon: Users
+      number: "60+", label: "Spokojených klientů", icon: Users,
       description: "Díky sehrané práci dvou lidí dokončíme práci rychle a kvalitně"
     },
     {
