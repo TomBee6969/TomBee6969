@@ -1,9 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Car } from 'lucide-react';
+import { Car, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,8 +15,17 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <header className={`fixed top-4 left-0 right-0 z-50 animate-fade-in-slide-down transition-all duration-300`}>
+    <>
+      <header className={`fixed top-4 left-0 right-0 z-50 animate-fade-in-slide-down transition-all duration-300`}>
       <div className={`mx-auto transition-all duration-300 ${
       isScrolled 
           ? 'bg-deep-black/80 backdrop-blur-md rounded-3xl mt-0 max-w-5xl' 
@@ -57,16 +67,89 @@ const Header: React.FC = () => {
             </a>
             
             {/* Mobile hamburger menu */}
-            <div className="md:hidden flex flex-col space-y-1 cursor-pointer">
+            <button 
+              onClick={toggleMobileMenu}
+              className="md:hidden flex flex-col space-y-1 cursor-pointer p-2 hover:bg-pearl-white/10 rounded-lg transition-colors duration-300"
+              aria-label="Toggle mobile menu"
+            >
               <div className="w-5 h-0.5 bg-pearl-white"></div>
               <div className="w-5 h-0.5 bg-pearl-white"></div>
               <div className="w-5 h-0.5 bg-pearl-white"></div>
-            </div>
+            </button>
           </div>
           </div>
         </div>
       </div>
-    </header>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-deep-black/80 backdrop-blur-sm"
+            onClick={closeMobileMenu}
+          ></div>
+          
+          {/* Menu Content */}
+          <div className="absolute top-4 right-4 left-4 bg-deep-black/95 backdrop-blur-md border border-platinum-silver/20 rounded-3xl p-6">
+            {/* Close Button */}
+            <div className="flex justify-end mb-6">
+              <button 
+                onClick={closeMobileMenu}
+                className="p-2 hover:bg-pearl-white/10 rounded-lg transition-colors duration-300"
+                aria-label="Close mobile menu"
+              >
+                <X className="w-6 h-6 text-pearl-white" />
+              </button>
+            </div>
+            
+            {/* Navigation Links */}
+            <nav className="space-y-4">
+              <a 
+                href="#sluzby" 
+                onClick={closeMobileMenu}
+                className="block text-pearl-white hover:text-champagne-gold transition-colors text-lg font-medium py-3 px-4 rounded-lg hover:bg-pearl-white/5"
+              >
+                Služby
+              </a>
+              <a 
+                href="#proces" 
+                onClick={closeMobileMenu}
+                className="block text-pearl-white hover:text-champagne-gold transition-colors text-lg font-medium py-3 px-4 rounded-lg hover:bg-pearl-white/5"
+              >
+                Proces
+              </a>
+              <a 
+                href="#onas" 
+                onClick={closeMobileMenu}
+                className="block text-pearl-white hover:text-champagne-gold transition-colors text-lg font-medium py-3 px-4 rounded-lg hover:bg-pearl-white/5"
+              >
+                O nás
+              </a>
+              <a 
+                href="#kontakt" 
+                onClick={closeMobileMenu}
+                className="block text-pearl-white hover:text-champagne-gold transition-colors text-lg font-medium py-3 px-4 rounded-lg hover:bg-pearl-white/5"
+              >
+                Kontakt
+              </a>
+              
+              {/* CTA Button */}
+              <div className="pt-4 border-t border-platinum-silver/20">
+                <a 
+                  href="#kontakt" 
+                  onClick={closeMobileMenu}
+                  className="block bg-gradient-gold text-deep-black px-6 py-3 rounded-full font-semibold text-center hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300"
+                >
+                  Rezervace
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
