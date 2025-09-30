@@ -96,6 +96,24 @@ const ProcessSection: React.FC = () => {
           ))}
         </div>
 
+        {/* Bottom CTA */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-graphite-grey/80 to-graphite-grey/40 backdrop-blur-sm p-8 rounded-3xl border border-champagne-gold/20 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-pearl-white mb-4">
+              Připraveni začít?
+            </h3>
+            <p className="text-platinum-silver mb-6 leading-relaxed">
+              Celý proces trvá jen několik hodin a výsledek vás nadchne
+            </p>
+            <a 
+              href="#reservation-form" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-gold text-deep-black rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300 group"
+            >
+              Rezervovat nyní
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
