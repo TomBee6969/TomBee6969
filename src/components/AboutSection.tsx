@@ -24,11 +24,6 @@ const AboutSection: React.FC = () => {
       icon: Shield,
       number: "60+", label: "Spokojených klientů", icon: Users,
       description: "Díky sehrané práci dvou lidí dokončíme práci rychle a kvalitně"
-    },
-    {
-      icon: CheckCircle,
-      title: "Garance kvality",
-      number: "3h", label: "Zpracování", icon: Clock
     }
   ];
 
