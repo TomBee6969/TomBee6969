@@ -45,6 +45,15 @@ const HeroSection: React.FC = () => {
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
+
+          {/* Mobile Hero Image */}
+          <div className="md:hidden block mt-8">
+            <img 
+              src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(45).png?updatedAt=1759259826305" 
+              alt="FB Detailing" 
+              className="w-full h-auto rounded-2xl shadow-lg"
+            />
+          </div>
         </div>
       </div>
     </section>
