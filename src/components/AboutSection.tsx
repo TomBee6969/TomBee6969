@@ -77,7 +77,7 @@ const AboutSection: React.FC = () => {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Features */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <h3 className="text-3xl font-bold mb-8">
               Proč si vybrat <span className="animated-gold-text">nás?</span>
             </h3>
@@ -85,19 +85,19 @@ const AboutSection: React.FC = () => {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-r from-graphite-grey/60 to-transparent p-6 rounded-2xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 hover:transform hover:translateX-2 group"
+                className="bg-gradient-to-r from-graphite-grey/60 to-transparent p-8 rounded-2xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 hover:transform hover:translateX-2 group"
               >
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center group-hover:rotate-6 transition-transform duration-300">
-                      <feature.icon className="w-6 h-6 text-deep-black" />
+                    <div className="w-14 h-14 bg-gradient-gold rounded-2xl flex items-center justify-center group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                      <feature.icon className="w-7 h-7 text-deep-black" />
                     </div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-pearl-white mb-2 group-hover:text-champagne-gold transition-colors">
+                  <div className="flex-1">
+                    <h4 className="text-xl font-semibold text-pearl-white mb-3 group-hover:text-champagne-gold transition-colors">
                       {feature.title}
                     </h4>
-                    <p className="text-platinum-silver leading-relaxed">
+                    <p className="text-platinum-silver leading-relaxed text-base">
                       {feature.description}
                     </p>
                   </div>
