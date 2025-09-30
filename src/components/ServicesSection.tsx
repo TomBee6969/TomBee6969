@@ -45,11 +45,11 @@ const ServicesSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-pearl-white/5 backdrop-blur-sm p-6 rounded-2xl hover:bg-pearl-white/10 transition-all duration-300 border border-platinum-silver/10 hover:border-champagne-gold/30 relative"
+              className="bg-pearl-white/5 backdrop-blur-sm p-6 rounded-2xl hover:bg-pearl-white/10 transition-all duration-300 border border-platinum-silver/10 hover:border-champagne-gold/30 relative flex flex-col h-full"
             >
               {service.isPopular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-champagne-gold text-deep-black px-4 py-1 rounded-full flex items-center space-x-1 text-sm font-semibold z-10">
@@ -77,7 +77,7 @@ const ServicesSection: React.FC = () => {
                 ))}
               </ul>
               
-              <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+              <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 mt-auto ${
                 service.isPopular 
                   ? 'bg-gradient-gold text-deep-black hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow' 
                   : 'bg-transparent border border-champagne-gold text-champagne-gold hover:bg-champagne-gold hover:text-deep-black'
