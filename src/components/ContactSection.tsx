@@ -226,11 +226,11 @@ const ContactSection: React.FC = () => {
             <div className="mt-8 flex items-center justify-center space-x-6 text-center">
               <div className="flex items-center space-x-2">
                 <Star className="w-5 h-5 text-champagne-gold" />
-                <span className="text-sm text-platinum-silver">5.0 hodnocení</span>
+                <span className="text-sm text-platinum-silver">4.8 hodnocení</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />
-                <span className="text-sm text-platinum-silver">1000+ klientů</span>
+                <span className="text-sm text-platinum-silver">60+ klientů</span>
               </div>
             </div>
           </div>
