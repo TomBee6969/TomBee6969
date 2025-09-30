@@ -8,21 +8,21 @@ const ProcessSection: React.FC = () => {
       title: "Rezervace",
       description: "Kontaktujte nás a domluvte si termín",
       icon: Calendar,
-      color: "from-blue-500 to-blue-600"
+      color: "from-champagne-gold to-yellow-500"
     },
     {
       step: 2,
       title: "Převzetí",
       description: "O váš vůz se postaráme tam, kde vám to nejlépe vyhovuje – u vás doma, nebo v naší garáži",
       icon: MapPin,
-      color: "from-green-500 to-green-600"
+      color: "from-champagne-gold to-yellow-500"
     },
     {
       step: 3,
       title: "Detailing",
       description: "Pracujeme ve dvou, používáme kvalitní prostředky a výsledkem je auto hotové rychle a s citem k detailu",
       icon: Wrench,
-      color: "from-purple-500 to-purple-600"
+      color: "from-champagne-gold to-yellow-500"
     },
     {
       step: 4,
