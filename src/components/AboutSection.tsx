@@ -112,31 +112,6 @@ const AboutSection: React.FC = () => {
 
           {/* Right Column - Image and CTA */}
           <div className="space-y-8">
-            {/* CTA Card */}
-            <div className="bg-gradient-to-br from-champagne-gold/10 to-transparent p-8 rounded-2xl border border-champagne-gold/20">
-              <h4 className="text-2xl font-bold text-pearl-white mb-4">
-                Připraveni na <span className="animated-gold-text">změnu?</span>
-              </h4>
-              <p className="text-platinum-silver mb-6 leading-relaxed">
-                Nechte svůj vůz v rukou profesionálů. Kontaktujte nás ještě dnes 
-                a rezervujte si termín pro prémiové auto detailing.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="#reservation-form" 
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-gold text-deep-black rounded-full font-semibold hover:shadow-lg hover:shadow-champagne-gold/25 hover-glow transition-all duration-300 group"
-                >
-                  Rezervovat termín
-                  <Zap className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
-                </a>
-                <a 
-                  href="#kontakt" 
-                  className="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-champagne-gold text-champagne-gold rounded-full font-semibold hover:bg-champagne-gold hover:text-deep-black transition-all duration-300"
-                >
-                  Kontaktovat nás
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
