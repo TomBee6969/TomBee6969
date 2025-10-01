@@ -66,7 +66,7 @@ const ContactSection: React.FC = () => {
     try {
       // Prepare form data for Web3Forms
       const web3FormData = new FormData();
-      web3FormData.append('access_key', '283eabee-8d97-4858-aca4-48ddfceb1007');
+      web3FormData.append('access_key', '596d356a-a3b4-413e-939e-6e2a8a03353f');
       web3FormData.append('name', formData.name);
       web3FormData.append('email', formData.email);
       web3FormData.append('phone', formData.phone);
