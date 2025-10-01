@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <img 
               src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(43).png?updatedAt=1759259129217" 
-              alt="FB Detailing Logo" 
+              alt="FB Detailing - auto detailing Uherské Hradiště" 
               className="h-12 w-auto object-contain"
             />
           </div>

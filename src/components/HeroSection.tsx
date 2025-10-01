@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(45).png?updatedAt=1759259826305" 
-          alt="FB Detailing background" 
+          alt="FB Detailing - profesionální čištění interiéru a exteriéru automobilu" 
           className="w-full h-full object-cover object-center md:block hidden"
         />
         {/* Black background for mobile */}
@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
           <div className="md:hidden block mt-8">
             <img 
               src="https://ik.imagekit.io/studioborak/FBDetailing/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(45).png?updatedAt=1759259826305" 
-              alt="FB Detailing" 
+              alt="FB Detailing - mobilní auto detailing služby Uherské Hradiště" 
               className="w-full h-auto rounded-2xl shadow-lg scale-110"
             />
           </div>
