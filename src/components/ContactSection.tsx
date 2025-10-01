@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { cs } from 'date-fns/locale';
+import { format } from 'date-fns';
 import { Phone, Mail, MapPin, Instagram, Facebook, Clock, Star, Send, CheckCircle } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
@@ -18,6 +19,19 @@ const ContactSection: React.FC = () => {
   // UI state
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{type: 'success' | 'error', text: string} | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const services = [
     {
@@ -71,7 +85,7 @@ const ContactSection: React.FC = () => {
       web3FormData.append('email', formData.email);
       web3FormData.append('phone', formData.phone);
       web3FormData.append('service', formData.service);
-      web3FormData.append('reservation_date', selectedDate.toLocaleString('cs-CZ'));
+      web3FormData.append('reservation_date', selectedDate ? selectedDate.toLocaleString('cs-CZ') : '');
       web3FormData.append('message', formData.message);
       web3FormData.append('subject', `Nová rezervace od ${formData.name} - ${formData.service}`);
 
@@ -325,22 +339,37 @@ const ContactSection: React.FC = () => {
               </div>
               <div>
                 <label htmlFor="datetime" className="block text-sm font-medium mb-2">Datum a čas čištění</label>
-                <DatePicker
-                  id="datetime"
-                  selected={selectedDate}
-                  onChange={(date: Date | null) => setSelectedDate(date)}
-                  locale={cs}
-                  showTimeSelect
-                  timeFormat="HH:mm"
-                  timeIntervals={60}
-                  dateFormat="dd.MM.yyyy HH:mm"
-                  minDate={new Date()}
-                  placeholderText="Vyberte datum a čas"
-                  className="w-full px-4 py-3 bg-deep-black/70 border border-platinum-silver/20 rounded-xl focus:border-champagne-gold focus:outline-none text-pearl-white transition-all duration-300 hover:bg-deep-black/90"
-                  calendarClassName="bg-deep-black border border-platinum-silver/20"
-                  timeCaption="Čas"
-                  required
-                />
+                {isMobile ? (
+                  <input
+                    type="datetime-local"
+                    id="datetime"
+                    value={selectedDate ? format(selectedDate, "yyyy-MM-dd'T'HH:mm") : ''}
+                    onChange={(e) => {
+                      const date = e.target.value ? new Date(e.target.value) : null;
+                      setSelectedDate(date);
+                    }}
+                    min={format(new Date(), "yyyy-MM-dd'T'HH:mm")}
+                    className="w-full px-4 py-3 bg-deep-black/70 border border-platinum-silver/20 rounded-xl focus:border-champagne-gold focus:outline-none text-pearl-white transition-all duration-300 hover:bg-deep-black/90"
+                    required
+                  />
+                ) : (
+                  <DatePicker
+                    id="datetime"
+                    selected={selectedDate}
+                    onChange={(date: Date | null) => setSelectedDate(date)}
+                    locale={cs}
+                    showTimeSelect
+                    timeFormat="HH:mm"
+                    timeIntervals={60}
+                    dateFormat="dd.MM.yyyy HH:mm"
+                    minDate={new Date()}
+                    placeholderText="Vyberte datum a čas"
+                    className="w-full px-4 py-3 bg-deep-black/70 border border-platinum-silver/20 rounded-xl focus:border-champagne-gold focus:outline-none text-pearl-white transition-all duration-300 hover:bg-deep-black/90"
+                    calendarClassName="bg-deep-black border border-platinum-silver/20"
+                    timeCaption="Čas"
+                    required
+                  />
+                )}
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">Poznámka</label>
