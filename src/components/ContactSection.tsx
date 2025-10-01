@@ -132,14 +132,14 @@ const ContactSection: React.FC = () => {
           <h2 className="text-4xl md:text-6xl font-bold mb-6" role="heading" aria-level="2">
             <span className="animated-gold-text">Kontakt</span>
           </h2>
-          <p className="text-xl text-platinum-silver max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-platinum-silver max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
             Kontaktujte nás a rezervujte si termín pro prémiové auto detailing
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 relative z-10 px-2 sm:px-0">
           {/* Contact Information Card */}
-          <div className="bg-gradient-to-br from-graphite-grey/80 to-graphite-grey/40 backdrop-blur-sm p-8 rounded-3xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 group">
+          <div className="bg-gradient-to-br from-graphite-grey/80 to-graphite-grey/40 backdrop-blur-sm p-4 sm:p-8 rounded-3xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 group">
             <div className="flex items-center mb-8">
               <div className="w-12 h-12 bg-gradient-gold rounded-2xl flex items-center justify-center mr-4 group-hover:rotate-6 transition-transform duration-300">
                 <Phone className="w-6 h-6 text-deep-black" />
@@ -150,7 +150,7 @@ const ContactSection: React.FC = () => {
             </div>
             
             <div className="space-y-6">
-              <div className="flex items-center p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
+              <div className="flex items-center p-3 sm:p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
                 <div className="w-10 h-10 bg-gradient-to-br from-champagne-gold to-yellow-500 rounded-xl flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
@@ -165,7 +165,7 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-center p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
+              <div className="flex items-center p-3 sm:p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
                 <div className="w-10 h-10 bg-gradient-to-br from-champagne-gold to-yellow-500 rounded-xl flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
@@ -180,7 +180,7 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-center p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
+              <div className="flex items-center p-3 sm:p-4 bg-deep-black/50 rounded-xl hover:bg-deep-black/70 transition-all duration-300 group/item">
                 <div className="w-10 h-10 bg-gradient-to-br from-champagne-gold to-yellow-500 rounded-xl flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
@@ -246,7 +246,7 @@ const ContactSection: React.FC = () => {
           </div>
 
           {/* Reservation Form Card */}
-          <div id="reservation-form" className="bg-gradient-to-br from-graphite-grey/80 to-graphite-grey/40 backdrop-blur-sm p-8 rounded-3xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 group">
+          <div id="reservation-form" className="bg-gradient-to-br from-graphite-grey/80 to-graphite-grey/40 backdrop-blur-sm p-4 sm:p-8 rounded-3xl border border-platinum-silver/10 hover:border-champagne-gold/30 transition-all duration-300 group">
             <div className="flex items-center mb-8">
               <div className="w-12 h-12 bg-gradient-gold rounded-2xl flex items-center justify-center mr-4 group-hover:rotate-6 transition-transform duration-300">
                 <Send className="w-6 h-6 text-deep-black" />
